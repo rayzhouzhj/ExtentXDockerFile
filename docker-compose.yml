@@ -1,0 +1,12 @@
+version: '2'
+services:
+  automation-server:
+    build: automation-server
+    image: ray/automation-server:v1
+    hostname: 127.0.0.1
+    volumes:
+      - ~/Documents/Mongo/mongodb:/data/db
+    ports:
+      - "1337:1337"
+      - "27017:27017"
+      - "28017:28017"
